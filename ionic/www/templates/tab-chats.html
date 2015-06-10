@@ -1,0 +1,51 @@
+<ion-view>
+  <ion-nav-title>
+      {{ title }}
+  </ion-nav-title>
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <img ng-src="{{chat.face}}">
+        <h2>{{chat.name}}</h2>
+        <p ng-bind-html="chat.lastText"></p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+
+  <ion-footer-bar>
+    <!--<div class="bar bar-footer">-->
+      <!--<div class="list">-->
+        <!--<label class="item item-input">-->
+          <!--<input type="text" placeholder="内容" ng-model="message">-->
+          <!--<button class="button button-clear" ng-click="send()">发送</button>-->
+        <!--</label>-->
+      <!--</div>-->
+
+    <!--</div>-->
+
+    <div class="bar bar-footer">
+      <div class="title" style="width:100%;">
+        <div>
+          <input maxlength="300" type="text" placeholder="内容..." ng-model="message">
+        </div>
+      </div>
+      <div class="button button-clear">
+        <button class="button" ng-click="record()">
+          录音
+        </button>
+        <button class="button" ng-click="pickImage()">
+          图片
+        </button>
+        <button class="button" ng-click="send()">
+          发送
+        </button>
+      </div>
+    </div>
+  </ion-footer-bar>
+</ion-view>

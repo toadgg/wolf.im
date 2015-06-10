@@ -1,0 +1,15 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "wolfim": {
+    "name": "wolfim",
+    "connector": "mongodb",
+    "host": "localhost",
+    "port": 27017,
+    "database": "wolf_im",
+    "username": "",
+    "password": ""
+  }
+}

@@ -1,0 +1,4 @@
+message Message {
+    required string nickname = 1;
+    required string message = 2;
+}

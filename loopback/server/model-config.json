@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "wolfim"
+  },
+  "AccessToken": {
+    "dataSource": "wolfim",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "wolfim",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "wolfim",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "wolfim",
+    "public": false
+  }
+}
